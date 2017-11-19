@@ -23,7 +23,7 @@ git clone https://github.com/8483/node-jwt-auth.git
 
 ## Install
 
-#### Environment
+### Environment
 
 Use this to install Node, NPM and MySQL.  
 
@@ -39,7 +39,7 @@ If `mysql-server` is not runnig, start the service.
 sudo service mysql start
 ```
 
-#### Database
+### Database
 
 After installing `mysql-server`, create the database. Will ask for the database password.
 
@@ -47,7 +47,7 @@ After installing `mysql-server`, create the database. Will ask for the database 
 mysql -p < db.sql
 ```
 
-#### config.js
+### config.js
 The database password should also be used in the `config.js` file in order to be able to connect to the database. You can also change the `token_secret`.  
 
 ```javascript
@@ -57,22 +57,20 @@ module.exports = {
 }
 ```
 
-
-#### Backend
-
+### Backend
 Install all the dependencies.  
 ```bash
 npm install
 ```
 ## Usage
 
-#### Start the server
+### Start the server
 This will start the server on port 3000. To use it, go to `localhost:3000`.
 
 ```bash
 npm start
 ```
-#### Register a user
+### Register a user
 For this and all following requests, use **Postman** to make them.  
 
 **Request:** POST  
@@ -87,7 +85,7 @@ For this and all following requests, use **Postman** to make them.
 ```
 The password is saved in an encrypted format and it would look like this: `$2a$10$KZEsTwSI.4cfUb1EnjEa0e0mxny4q1ksUSfDwal5R9kE0I0R46JVq`  
 
-#### Login
+### Login
 **Request:** POST  
 **URL:** http://localhost:3000/api/authenticate   
 **Headers (Key: Value):** Content-Type: application/json  
@@ -100,7 +98,7 @@ The password is saved in an encrypted format and it would look like this: `$2a$1
 ```
 This will provide a token which is used to gain access to the data. The token would look something like this: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1pa2UiLCJpYXQiOjE1MTExMjcyNjMsImV4cCI6MTUxMTE2MzI2M30.lm3k2rU7EBjTbJ5YeKTuwPxWNQZx23EDo_2ycfTTyWw`  
 
-#### Get data
+### Get data
 In order to access the data, the `token` should be replaced with the one obtained during the login.  
 
 **Request:** GET  
