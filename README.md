@@ -30,7 +30,7 @@ Use this to install Node, NPM and MySQL.
 ```bash
 sudo apt-get update;
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install nodejs npm mysql-server -y;
+sudo apt-get install nodejs mysql-server -y;
 mysql_secure_installation;
 ```
 If `mysql-server` is not runnig, start the service.
