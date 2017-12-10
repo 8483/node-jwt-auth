@@ -29,7 +29,7 @@ Use this to install Node, NPM and MySQL.
 
 ```bash
 sudo apt-get update;
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -;
 sudo apt-get install nodejs mysql-server -y;
 mysql_secure_installation;
 ```
@@ -45,6 +45,15 @@ After installing `mysql-server`, create the database. Will ask for the database 
 
 ```bash
 mysql -p < db.sql
+```
+To check the database, use:
+```bash
+mysql -p               # Login and prompt for password.
+show databases;        # Shows all the databases.
+use db;                # Select db as the current database.
+show tables;           # Show db's tables.
+describe user;         # Show the user table.
+select * from user;    # Show all the users.
 ```
 
 ### config.js
